@@ -1,0 +1,158 @@
+.info-container{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+    padding-left:2rem;
+}
+
+
+.info-border{
+    height: 8.5rem; 
+    background:var(--rose);
+    width:.3rem;
+    
+}
+
+.info-p-1{
+    font-size:var(--size-sm);
+    line-height:1.5rem;
+    padding-top:.75rem;
+}
+.info-p-2{
+    font-size:var(--size-xs);
+    color:gray;
+    line-height:1rem;}
+
+.price-buy{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    gap:1rem;
+    padding-left:calc(.75rem + 2rem + .3rem)
+}
+
+.price{
+    font-weight:750;
+    letter-spacing: .01rem;
+    padding:.3rem 0;
+}
+
+/*Mobile M*/
+@media (min-width: 375px) {
+    .details-container{
+        padding-left:1.75rem;
+    }
+}
+
+/*Mobile L*/
+@media (min-width: 425px) {
+    .details-container{
+        padding-left:3rem;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 480px) {
+    .info-container{
+        width:10.5rem;
+        padding-left:.25rem;
+ }
+ .details-container{
+    padding-left:.25rem;
+ }
+.pink-box{
+width:10rem;
+}
+}
+
+/* Laptop S*/
+@media (min-width: 768px) {
+    .info-container{
+        width:16rem;
+        padding-left:1rem;
+ }
+    .info-title{
+        font-size: var(--size-3xl);
+     }
+     .info-p-1{
+        font-size: var(--size-base);
+     }
+     .info-p-2{
+        font-size: var(--size-sm);
+     }
+     .info-border{
+        height:11rem;
+        width:.6rem;
+     }
+}
+
+/* Laptop M */
+@media (min-width: 1024px) {
+    .info-container{
+        width:25rem;
+        padding-bottom:1rem;
+ }
+    .details-container{
+        padding-left:2rem;
+ }
+    .info-title{
+        font-size: var(--size-4xl);
+     }
+     .info-p-1{
+        font-size: var(--size-lg);
+        padding:.5rem;
+     }
+     .info-p-2{
+        font-size: var(--size-base);
+     }
+     .info-border{
+        height:11rem;
+        width:.65rem;
+     }
+}
+
+/* Laptop L */
+@media (min-width: 1280px) {
+    .info-container{
+        width:25rem;
+        padding-bottom:1rem;
+ }
+    .details-container{
+        padding-left:4rem;
+ }
+    .info-border{
+        height:16rem;
+        width:.75rem
+    }
+    .info-title{
+        font-size: var(--size-6xl);
+     }
+     .info-p-1{
+        font-size: var(--size-3xl);
+        padding:.5rem;
+     }
+     .info-p-2{
+        font-size: var(--size-2xl);
+     }
+}
+
+/* Laptop XL */
+@media (min-width: 1536px) {.info-container{
+    width:35rem;
+    padding-bottom:1rem;
+    gap:2rem;
+}
+.details-container{
+    padding-left:4rem;
+}
+.info-border{
+    height:20rem;
+}
+.price-buy{
+    padding-left:7rem;
+}
+.info-p-1, .info-p-2{
+    padding:1rem 0;
+}
+}

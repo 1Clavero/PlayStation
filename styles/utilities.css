@@ -1,0 +1,106 @@
+*{--rose:linear-gradient( #ff66b3,#ff6666)}
+
+/* Sizes */
+body{--size-xxs: 0.5rem;
+--size-xs: 0.75rem;
+--size-sm: 0.875rem;
+--size-base: 1rem;
+--size-lg: 1.125rem;
+--size-xl: 1.25rem;
+--size-2xl: 1.5rem;
+--size-3xl: 1.875rem;
+--size-4xl: 2.25rem;
+--size-5xl: 3rem;
+--size-6xl: 3.75rem;
+--size-7xl: 4.5rem;
+--size-8xl: 6rem;
+--size-9xl: 8rem;
+--size-10xl: 10rem;}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+ /* Mobile M*/
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+/* Mobile L*/
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+/* Mobile XL*/
+@media (min-width: 425px) {
+  .container {
+    max-width: 425px;
+  }
+}
+
+/* Tablet*/
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+/* Laptop S*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/*Laptop M*/
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* Laptop L*/
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Laptop XL*/
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+
+/*Mobile M*/
+/* @media (min-width: 375px) {} */
+
+/*Mobile L*/
+/* @media (min-width: 425px) {} */
+
+/*Tablet*/
+/* @media (min-width: 480px) {} */
+
+/* Laptop S*/
+/* @media (min-width: 768px) {} */
+
+/* Laptop M */
+/* @media (min-width: 1024px) {} */
+
+/* Laptop L */
+/* @media (min-width: 1280px) {} */
+
+/* Laptop XL */
+/* @media (min-width: 1536px) {} */
+
+
