@@ -1,28 +1,63 @@
+.details-container{
+    z-index:5;
+    overflow-y:hidden;
+
+}
 .info-container{
     display:flex;
     align-items:center;
     gap:.75rem;
     padding-left:2rem;
+    
 }
-
 
 .info-border{
     height: 8.5rem; 
     background:var(--rose);
-    width:.3rem;
-    
+    width:.3rem;  
+    animation: info-border-entrance 3s ease-in;
 }
+@keyframes info-border-entrance {
+    0%{transform:translateX(-3rem)}
+    20%{transform:translateX(-3rem)}
+    100%{transform:translateX(0rem)}}
 
-.info-p-1{
+    .info-title {
+        animation:info-title-entrance 3s ease-in;
+    }
+    @keyframes info-title-entrance {
+        0%{opacity:0}
+40%{opacity:0}
+        100%{opacity:100}
+    }
+.info-p-2{
     font-size:var(--size-sm);
     line-height:1.5rem;
     padding-top:.75rem;
+    overflow-y:hidden;
+}
+
+.p-medium{
+    animation:info-p-1-entrance 3.7s ease-in;
+}
+
+@keyframes info-p-1-entrance {
+    0%{opacity:0}
+    60%{opacity:0}
+    100%{opacity:1}
 }
 .info-p-2{
     font-size:var(--size-xs);
     color:gray;
-    line-height:1rem;}
-
+    line-height:1rem;
+    animation:info-p-2-entrance 4s ease-in;
+ 
+}
+    @keyframes info-p-2-entrance {
+        0%{opacity:0}
+        70%{opacity:0}
+        100%{opacity:1}
+    }
 .price-buy{
     display:flex;
     flex-direction:column;
@@ -36,7 +71,14 @@
     font-weight:750;
     letter-spacing: .01rem;
     padding:.3rem 0;
+    animation: price-entrance 4.8s ease-in;
 }
+@keyframes price-entrance {
+    0%{opacity:0}
+    80%{opacity:0}
+    100%{opacity:1}
+}
+
 
 /*Mobile M*/
 @media (min-width: 375px) {
@@ -50,6 +92,13 @@
     .details-container{
         padding-left:3rem;
     }
+    @keyframes info-border-entrance {
+        0%{transform:translateX(-10rem)}
+        30%{transform:translateX(-10rem)}
+        100%{transform:translateX(0rem)}}
+    .info-border{
+        animation:info-border-entrance 2.5s
+        }
 }
 
 /*Tablet*/
@@ -64,6 +113,52 @@
 .pink-box{
 width:10rem;
 }
+.p-medium{
+    animation:info-p-1-entrance 2s ease-in;
+}
+
+@keyframes info-p-1-entrance {
+    0%{opacity:0}
+    30%{opacity:0}
+    100%{opacity:1}
+}
+.info-p-2{
+    font-size:var(--size-xs);
+    color:gray;
+    line-height:1rem;
+    animation:info-p-2-entrance 2.5s ease-in;
+}
+    @keyframes info-p-2-entrance {
+        0%{opacity:0}
+        30%{opacity:0}
+        100%{opacity:1}
+    }
+.info-title {
+    animation:info-title-entrance 1.5s ease-in;
+}
+@keyframes info-title-entrance {
+    0%{opacity:0}
+20%{opacity:0}
+    100%{opacity:100}
+}
+.info-border{ 
+    animation: info-border-entrance 1s linear;
+    height:10rem;
+}
+@keyframes info-border-entrance {
+    0%{transform:translateX(-15rem)}
+    100%{transform:translateX(0rem)}}
+    .price{
+        font-weight:750;
+        letter-spacing: .01rem;
+        padding:.3rem 0;
+        animation: price-entrance 3.5s linear;
+    }
+    @keyframes price-entrance {
+        0%{opacity:0}
+        40%{opacity:0}
+        100%{opacity:1}
+    }
 }
 
 /* Laptop S*/
@@ -75,7 +170,7 @@ width:10rem;
     .info-title{
         font-size: var(--size-3xl);
      }
-     .info-p-1{
+     .p-medium{
         font-size: var(--size-base);
      }
      .info-p-2{
@@ -84,9 +179,13 @@ width:10rem;
      .info-border{
         height:11rem;
         width:.6rem;
+         animation: info-border-entrance 1s linear;
      }
-}
-
+     @keyframes info-border-entrance {
+        0%{transform:translateX(-15rem)}
+        100%{transform:translateX(0rem)}}
+        }
+       
 /* Laptop M */
 @media (min-width: 1024px) {
     .info-container{
@@ -99,17 +198,21 @@ width:10rem;
     .info-title{
         font-size: var(--size-4xl);
      }
-     .info-p-1{
+     .p-medium{
         font-size: var(--size-lg);
         padding:.5rem;
      }
      .info-p-2{
         font-size: var(--size-base);
+        padding:.5rem 0;
      }
      .info-border{
         height:11rem;
         width:.65rem;
      }
+     @keyframes info-border-entrance {
+        0%{transform:translateX(-12rem)}
+        100%{transform:translateX(0rem)}}
 }
 
 /* Laptop L */
@@ -128,12 +231,13 @@ width:10rem;
     .info-title{
         font-size: var(--size-6xl);
      }
-     .info-p-1{
+     .p-medium{
         font-size: var(--size-3xl);
         padding:.5rem;
      }
      .info-p-2{
         font-size: var(--size-2xl);
+        padding:1rem 0;
      }
 }
 
@@ -152,7 +256,13 @@ width:10rem;
 .price-buy{
     padding-left:7rem;
 }
-.info-p-1, .info-p-2{
+.p-medium{
     padding:1rem 0;
 }
+.info-p-2{
+    padding-bottom:1rem;
+}
+@keyframes info-border-entrance {
+    0%{transform:translateX(-20rem)}
+    100%{transform:translateX(0rem)}}
 }

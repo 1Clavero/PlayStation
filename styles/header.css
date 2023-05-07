@@ -1,7 +1,6 @@
  .header{
     display:flex;
     padding-top:1rem;
-    padding-bottom:1.5rem;
     justify-content:flex-end; 
  }
 
@@ -132,6 +131,8 @@ li:hover{
   .menu__title{
     font-size:var(--size-base);   
  } 
+
+
 }
 
 /* Laptop M */

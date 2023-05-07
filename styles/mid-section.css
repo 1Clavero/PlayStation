@@ -1,13 +1,12 @@
 .section-container{
     display:flex;
     flex-direction:column;
+    justify-content:flex-start;
     width:100%;
     padding-top:2rem;
-    gap:2rem;
     background-color: white;
     z-index:2;
 }
-
  /*Mobile M*/
 /* @media (min-width: 375px) {} */
 
@@ -22,7 +21,6 @@
 /*Tablet*/
 @media (min-width: 480px) {
   .section-container{
-    padding-top:4rem;
     flex-direction:row-reverse;
     gap:0rem;
  }
@@ -34,14 +32,14 @@
 /* Laptop M */
 @media (min-width: 1024px) {
     .section-container{
-        padding-top:7rem;
+        padding-top:6rem;
     }
 }
 
 /* Laptop L */
 @media (min-width: 1280px) {
     .section-container{
-    padding-top:10rem;
+    padding-top:5rem;
 }}
 
 /* Laptop XL */

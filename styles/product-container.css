@@ -1,12 +1,11 @@
 .product-container{
-    width:100%;
-    height:10rem;
+    height: 10rem;
     left:0;
-}
+    overflow: hidden;
 
+}
 @keyframes mobile-pink-box {
     0% {transform:translateX(15rem)}
-    60%{transform:translateX(7rem)}
    100%  {transform:translateX(0rem)}
   }
 
@@ -19,7 +18,10 @@
     z-index:3;
     border-radius: 1rem 0 0 1rem;
     background:linear-gradient( #ff66b3,#ff6666);
-    animation: mobile-pink-box .6s linear;
+    animation: mobile-pink-box .9s ease-in;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 @keyframes mobile-controller {
@@ -33,7 +35,7 @@
     height:8rem;
     left:.5rem;
     z-index:4;
-    animation:mobile-controller 1s linear;
+    animation:mobile-controller 1.6s linear;
 }
 
 .cart__button-li, .cart__text {
@@ -53,7 +55,7 @@
 }
 .add-icon{ 
     height:1.5rem;
-    animation: icon-entrance 1s linear 1.4s;
+    animation: icon-entrance 1s linear 4.9s;
 }
 
 @keyframes cart-text-entrance {
@@ -65,20 +67,23 @@
 
 .cart__text{
     font-size:var(--size-xxs);
-    animation: cart-text-entrance 1s linear 1.4s;
+    animation: cart-text-entrance 1s linear 4.9s;
 }
 
 .cart{
     height:3rem;
-    padding-left:50%;
-    padding-top:2.5rem;
     text-align:center;
     z-index:5;
-    position:absolute;
+    padding-left:2rem;
+    overflow:hidden;
  }
 
  /*Mobile M*/
 @media (min-width: 375px) {
+    .product-container{
+        height: 11rem;
+        padding-top:1rem;
+    }
     .controller{
         left:1rem;
         height:9.5rem;
@@ -87,108 +92,183 @@
         height:10rem;
         bottom:10rem;
     }
-}
+    @keyframes mobile-pink-box {
+        0% {transform:translateX(20rem)}
+       100%  {transform:translateX(0rem)}
+      }
+    
+    @keyframes mobile-controller {
+        0% {transform:translateX(25rem)}
+        50% {transform:translateX(25rem)}
+       100%  {transform:translateX(0rem)}
+      }
+} 
 
 /*Mobile L*/
 @media (min-width: 425px) { 
   .pink-box{
     height:11rem;
+    animation-duration: .6;
+    bottom:11rem;
  }
   .controller{
     height:11rem;
-    top:1rem;
     left:1.5rem;
  }
-  .cart{
-    padding-top:3.5rem;
-    padding-left:55%;
+  
+ @keyframes mobile-pink-box {
+    0% {transform:translateX(20rem)}
+   100%  {transform:translateX(0rem)}
+  }
+
+@keyframes mobile-controller {
+    0% {transform:translateX(25rem)}
+    60% {transform:translateX(25rem)}
+   100%  {transform:translateX(0rem)}
+  }
+ .cart{
+    padding-left:3rem;
  }
+ .product-container{
+    height: 13rem;
+    padding-bottom:2rem;
  
+}
 }
 
 /*Tablet*/
-@keyframes tablet-controller {
-    0% {transform:translateX(35rem)}
-    35% {transform:translateX(35rem)}
-   100%  {transform:translateX(0rem)}
-  }
+
 @media (min-width: 480px) {
+    .product-container{
+        height: 15rem;
+        padding-top:.5rem;
+        flex:1;
+    }
+    @keyframes tablet-controller {
+        0% {transform:translateX(35rem)}
+        60% {transform:translateX(35rem)}
+       100%  {transform:translateX(0rem)}
+      }
     .controller{
   height:8rem;
         top:1rem;
-        left:2rem;
-        animation:tablet-controller 1.4s linear;
+        left:0;
+        animation:tablet-controller 2.5s ease-in;
     }
     @keyframes tablet-pink-box {
         0% {transform:translateX(32rem)}
-        60%{transform:translateX(15rem)}
+        70%{transform:translateX(32rem)}
        100%  {transform:translateX(0rem)}
       }
     .pink-box{
         height:9.5rem;
         bottom:8rem;
-        width:10rem;
-        left:9rem;
-        animation: tablet-pink-box .8s linear;
+        width:15rem;
+        left:6rem;
+        animation: tablet-pink-box 3s ease-in;
     }
-    .cart{
-    padding-top:3rem;
-    padding-left:6.5rem;
-    }
+    
+@keyframes cart-text-entrance {
+    25%  {font-size:var(--size-xs)}
+     50% {font-size:var(--size-xxs)}
+     75% {font-size:var(--size-xs)}
+    100%  {font-size:var(--size-xxs)}
 }
 
+.cart__text{
+    font-size:var(--size-xxs);
+    animation: cart-text-entrance 1s linear 3.5s;
+}
+
+@keyframes icon-entrance {
+    25% {height:2rem}
+     50% {height:1.5rem}
+     75% {height:2rem}
+    100%  {height:1.5rem}
+   }
+   .add-icon{ 
+       height:1.5rem;
+       animation: icon-entrance 1s linear 3.5s;
+   }
+   .cart{
+    padding-left:1.5rem;
+   }
+}
 /* Laptop S*/
-@keyframes desk-controller {
-    0% {transform:translateX(70rem)}
-    35% {transform:translateX(70rem)}
-   100%  {transform:translateX(0rem)}
-  }
 @media (min-width: 768px) {
+   
+    @keyframes tablet-controller {
+        0% {transform:translateX(37rem)}
+        60% {transform:translateX(37rem)}
+       100%  {transform:translateX(0rem)}
+      }
     .controller{
         height:15rem;
         top:0;
         left:0;
     }
-    @keyframes desk-pink-box {
-        0% {transform:translateX(100rem)}
-        60%{transform:translateX(50rem)}
-       100%  {transform:translateX(0rem)}
-      }
+   
     .pink-box{
         height:18rem;
         bottom:16.5rem;
         width:20rem;
         left:14rem;
-        animation: desk-pink-box .8s linear;
     }
-    .cart{
-    padding-top:7.5rem;
-    padding-left:10rem;
-    }
+    
+        .product-container{
+            height: 20rem;
+            padding-top:2rem;
+        }
  }
 
 /* Laptop M */
 @media (min-width: 1024px) {
+    
+        .product-container{
+            height: 22rem;
+        }
+    .cart{
+        padding-left:7rem;
+       }
+    @keyframes tablet-controller {
+        0% {transform:translateX(42rem)}
+        75% {transform:translateX(42rem)}
+       100%  {transform:translateX(0rem)}
+      }
     .controller{
         position:relative;
         height:17rem;
-        animation:desk-controller 1.4s linear;
+        animation:tablet-controller 2.5s ease-in;
     }
     .pink-box {
         width:18.75rem;
         left:14rem;
         bottom:18.5rem;
         height:20rem;
-    }
-  
-    .cart{
-        padding-left:11rem;
-        padding-top:8.5rem;
+        animation: tablet-pink-box 2.8s ease-in;
     }
 }
 
 /* Laptop L */
 @media (min-width: 1280px) {
+    .product-container{
+        height: 32rem;
+        padding-top:3rem;
+    }
+    .cart{
+        padding-left:12rem;
+        padding-bottom:7rem;
+       }
+    @keyframes tablet-controller {
+        0% {transform:translateX(56rem)}
+        70% {transform:translateX(56rem)}
+       100%  {transform:translateX(0rem)}
+      }
+      @keyframes tablet-pink-box {
+        0% {transform:translateX(44rem)}
+        70%{transform:translateX(44rem)}
+       100%  {transform:translateX(0rem)}
+      }
     .controller{
         position:relative;
         height:22rem;
@@ -199,10 +279,6 @@
         bottom:25rem;
         height:30rem;
     }
-    .cart{
-        padding-left:17rem;
-        padding-top:10rem;
-    }
     @keyframes icon-entrance-1 {
         25%  {height:3.5rem}
          50% {height:3rem}
@@ -211,13 +287,23 @@
     .add-icon{ 
         height:3rem;
         padding-bottom:1rem;
-        animation: icon-entrance-1 1s linear 1.4s;
+        animation: icon-entrance-1 1s linear 3.5s;
     }
 }
 
 
 /* Laptop XL */
 @media (min-width: 1536px) {
+    @keyframes tablet-controller {
+        0% {transform:translateX(112rem)}
+        70% {transform:translateX(112rem)}
+       100%  {transform:translateX(0rem)}
+      }
+      @keyframes tablet-pink-box {
+        0% {transform:translateX(88rem)}
+        70%{transform:translateX(88rem)}
+       100%  {transform:translateX(0rem)}
+      }
     .controller{
         height:25rem;
     }
@@ -225,10 +311,6 @@
         width:30rem;
         left:20rem;
         bottom:28rem;
-    }
-    .cart{
-        padding-left:18.5rem;
-        padding-top:12rem;
     }
     @keyframes icon-entrance-2 {
         25%  {height:5rem}
@@ -238,6 +320,6 @@
     .add-icon{ 
         height:4.5rem;
         padding-bottom:1rem;
-        animation: icon-entrance-2 1s linear 1.4s;
+        animation: icon-entrance-2 1s linear 3.5s;
     }
 }
